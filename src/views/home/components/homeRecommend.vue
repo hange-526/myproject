@@ -50,7 +50,7 @@
             ellipsis()
         .item-button
             background: #ff9300
-            padding: .02rem
+            padding: 0 .2rem
             border-radius: .06rem
             margin-top: .2rem
             color: #fff
