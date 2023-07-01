@@ -2,7 +2,7 @@
     <div>
         <div class="title">热销推荐</div>
         <ul>
-            <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item in list" :key="item.id">
                 <img class="item-img" :src="item.imgUrl" alt="">
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
@@ -17,30 +17,7 @@
 <script>
     export default {
         name:"homeRecommend",
-        data(){
-            return {
-                recommendList:[
-                    {
-                        id:"0001",
-                        imgUrl:"https://imgs.qunarzz.com/p/tts7/2304/a7/a362b7069d977902.jpg_160x160_fc20cd29.jpg",
-                        title:"鸽子窝公园",
-                        desc:"6人VIP团·全区域可上门接送·精华景区一览无余·省力路线"
-                    },
-                    {
-                        id:"0002",
-                        imgUrl:"https://imgs.qunarzz.com/p/tts7/2207/6b/1ec3e866d525a502.jpg_160x160_c16e6d8c.jpg",
-                        title:"北戴河渔岛海洋景区",
-                        desc:"赠价值200元海滩帐篷免租使用"
-                    },
-                    {
-                        id:"0003",
-                        imgUrl:"https://imgs.qunarzz.com/p/tts1/2304/6a/0b8c0c659647c602.jpg_160x160_2360165a.jpg",
-                        title:"北戴河仙螺岛",
-                        desc:"6人纯玩团，仙螺岛·跨海索道·四项娱乐项目通票+网红阿那亚"
-                    }
-                ]
-            }
-        }
+        props:["list"]
     }
 </script>
 

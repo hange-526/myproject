@@ -8,14 +8,15 @@
             输入城市/景点/游玩主题
         </div>
         <div class="header-right">
-            三亚<span class="iconfont arrow-icon">&#xeb6d;</span>
+            {{this.city}}<span class="iconfont arrow-icon">&#xeb6d;</span>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name:"HomeHeader"
+        name:"HomeHeader",
+        props:["city"]
     }
 </script>
 

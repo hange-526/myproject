@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
-        <swiper :options="swiperOption">
-            <swiper-slide v-for="item in swiperList" :key="item.id">
+        <swiper :options="swiperOption" v-if="showSwiper">  <!-- v-if的含义是，如果传过来的数组不是空数组的时候才渲染这个组件 -->
+            <swiper-slide v-for="item in list" :key="item.id">
                 <img class="swiper-img" :src="item.imgUrl" alt="">
             </swiper-slide>
             <div class="swiper-pagination"  slot="pagination"></div>
@@ -12,22 +12,18 @@
 <script>
     export default {
         name:"homeSwiper",
+        props:["list"],
         data (){
             return {
                 swiperOption:{
                     pagination:'.swiper-pagination',
                     loop:true
-                },
-                swiperList:[
-                    {
-                        id:'0001',
-                        imgUrl:'https://ad-dapp-osscp.qunarzz.com/ad_dapp_oss_oper/54cfc34ad8b0a7553e0dc411a8f807e2.jpg'
-                    },
-                    {
-                        id:'0002',
-                        imgUrl:'https://ad-dapp-osscp.qunarzz.com/ad_dapp_oss_oper/6f0237182ee000924615f5bc1b5c2d75.jpg'
-                    }
-                ]
+                }
+            }
+        },
+        computed:{
+            showSwiper(){
+                return this.list.length
             }
         }
     }
