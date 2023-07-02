@@ -3,6 +3,7 @@
         <city-header></city-header>
         <city-search></city-search>
         <city-list></city-list>
+        <city-alphabet></city-alphabet>
     </div>
 </template>
 
@@ -10,10 +11,11 @@
 import cityHeader from './components/cityHeader.vue';
 import citySearch from './components/citySearch.vue';
 import cityList from './components/cityList.vue';
+import cityAlphabet from './components/cityAlphabet.vue';
 
     export default {
         name:"cityView",
-        components:{cityHeader,citySearch,cityList}
+        components:{cityHeader,citySearch,cityList,cityAlphabet}
     }
 </script>
 
