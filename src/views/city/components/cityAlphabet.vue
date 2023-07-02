@@ -1,5 +1,5 @@
 <template>
-    <ul class="list">
+    <ul class="list" ref="wrapper">
         <li class="item">A</li>
         <li class="item">A</li>
         <li class="item">A</li>
@@ -12,8 +12,12 @@
 </template>
 
 <script>
+import Bscroll from 'better-scroll'
     export default {
-        name:"cityAlphabet"
+        name:"cityAlphabet",
+        mounted(){
+            this.scroll=new Bscroll(this.$refs.wrapper)    //给当前获取的dom设置滚动工具
+        }
     }
 </script>
 
