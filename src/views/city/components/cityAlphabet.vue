@@ -1,23 +1,13 @@
 <template>
     <ul class="list" ref="wrapper">
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
+            <li class="item" v-for="(item,key) in cities" :key="key">{{ key }}</li>
     </ul>
 </template>
 
 <script>
-import Bscroll from 'better-scroll'
     export default {
         name:"cityAlphabet",
-        mounted(){
-            this.scroll=new Bscroll(this.$refs.wrapper)    //给当前获取的dom设置滚动工具
-        }
+        props:["cities"]
     }
 </script>
 
