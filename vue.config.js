@@ -5,7 +5,8 @@ module.exports = defineConfig({
   configureWebpack:{
      resolve:{
       alias:{
-        "styles":path.join(__dirname,"src/assets/styles")
+        "styles":path.join(__dirname,"src/assets/styles"),
+        "common":path.join(__dirname,"src/common")
       }
      },
      devServer: {
