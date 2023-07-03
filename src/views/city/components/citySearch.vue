@@ -66,7 +66,7 @@ import Bscroll from 'better-scroll'
             this.scroll=new Bscroll(this.$refs.search)
         }
     }
-</script>
+</script> 
 
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
