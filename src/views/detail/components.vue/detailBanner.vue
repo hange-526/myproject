@@ -9,17 +9,19 @@
                     {{this.gallaryImgs.length}}</div>
             </div>
         </div>
-        <common-gallary :imgs="gallaryImgs" v-show="showGallary"
-        @close="handleGallaryClose"></common-gallary>
+        <fade-animation>
+            <common-gallary :imgs="gallaryImgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
+        </fade-animation>
     </div>
 </template>
 
 <script> 
 import commonGallary from 'common/gallary/commonGallary.vue'
+import fadeAnimation from 'common/fade/fadeAnimation.vue'
     export default {
         name:"detailBanner",
         props:["sightName","bannerImg","gallaryImgs"],
-        components:{commonGallary},
+        components:{commonGallary,fadeAnimation},
         data(){
             return {
                 showGallary:false
