@@ -6,7 +6,7 @@
                 <div class="banner-title">大连圣亚海洋世界(AAAA景区)</div>
                 <div class="banner-number">
                     <span class="iconfont banner-icon">&#xec7f;</span>
-                    39</div>
+                    2</div>
             </div>
         </div>
         <common-gallary :imgs="imgs" v-show="showGallary"
