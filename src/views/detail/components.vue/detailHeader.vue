@@ -38,6 +38,9 @@
         },
         activated(){    //因为我们使用了keepalive，所以只要页面展示就会执行activated钩子函数
             window.addEventListener('scroll',this.handleScroll)
+        },
+        deactivated(){
+            window.removeEventListener('scroll',this.handleScroll)
         }
     }
 </script>
